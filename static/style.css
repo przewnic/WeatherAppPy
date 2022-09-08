@@ -1,0 +1,140 @@
+html, body {
+	min-height: 100vh;
+	background: linear-gradient(#80a9df, #121045);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+h1 {
+	padding: 0px 20px;
+	font-weight: 700;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+	grid-gap: 1vw;
+	grid-auto-rows: 30vw;
+	padding-left: 20%;
+	padding-right: 20%;
+	margin-bottom: 2vw;
+	justify-content: center;
+}
+
+.card {
+	padding: 0;
+	border: none;
+	box-shadow: 0 0 1vw rgba(0,0,0,0.5);
+	background-size: cover;
+	border-radius: 0.5vw !important;
+	color: white;
+	font-weight: 600;
+	text-shadow: 0px 0px 1vw rgba(0,0,0,0.7);
+}
+
+.form {
+	margin-top: 7%;
+	padding-left: 10%;
+	padding-right: 10%;
+	text-align: center;
+	font-size: 1vw;
+	margin-bottom: 3%;
+}
+
+input {
+	border: none;
+	outline: none;
+	height: 3vw;
+	width: 40vw;
+	padding-left: 0.5vw;
+	box-shadow: 0 0 1vw rgba(0,0,0,0.5);
+}
+
+.submit-button {
+	margin-left: 1vw;
+	height: 3vw;
+	width: 9vw;
+	border: none;
+	outline: none !important;
+	background-color: #373252;
+	color: white;
+	box-shadow: 0 0 1vw rgba(0,0,0,0.5);
+}
+
+.night {
+	background-image: url("/static/img/night.jpg");
+}
+
+.day {
+	background-image: url("/static/img/day.jpg");
+}
+
+.evening-morning {
+	background-image: url("/static/img/evening-morning.jpg");
+}
+
+.wrapper {
+	min-height: 100vh;
+}
+
+.degrees {
+	text-align: center;
+	font-size: 2.5vw;
+	height: 10%;
+}
+
+.day > .degrees {
+	color: black;
+}
+
+.state {
+	text-align: center;
+	font-size: 1.5vw;
+}
+
+.day > .state {
+	color: black;
+}
+
+.city {
+	text-align: center;
+	height: 70%;
+	font-size: 2vw;
+	display: flex;
+	justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 6%;
+}
+
+.day > .state {
+	color: black;
+}
+
+.action-button {
+	background-color: transparent;
+	width: 1.5vw;
+	height: 1vw;
+	margin: 0 0.5vw;
+	padding: 1vw;
+	border: none;
+}
+
+.action-wrapper {
+	display: flex;
+	justify-content: flex-end;
+	margin: 0 1.5vw;
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+}
