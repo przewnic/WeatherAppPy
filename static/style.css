@@ -1,6 +1,6 @@
 html, body {
 	min-height: 100vh;
-	background: linear-gradient(#80a9df, #121045);
+	background: #262552;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	padding: 0;
@@ -68,15 +68,15 @@ input {
 }
 
 .night {
-	background-image: url("/static/img/night.jpg");
+	background-image: url("/static/img/night.png");
 }
 
 .day {
-	background-image: url("/static/img/day.jpg");
+	background-image: url("/static/img/day.png");
 }
 
 .evening-morning {
-	background-image: url("/static/img/evening-morning.jpg");
+	background-image: url("/static/img/evening.png");
 }
 
 .wrapper {
@@ -89,17 +89,9 @@ input {
 	height: 10%;
 }
 
-.day > .degrees {
-	color: black;
-}
-
 .state {
 	text-align: center;
 	font-size: 1.5vw;
-}
-
-.day > .state {
-	color: black;
 }
 
 .city {
@@ -112,8 +104,9 @@ input {
     padding-bottom: 6%;
 }
 
-.day > .state {
-	color: black;
+.date {
+	text-align: center;
+	font-size: 1vw;
 }
 
 .action-button {

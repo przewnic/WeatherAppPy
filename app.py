@@ -1,3 +1,4 @@
+from datetime import datetime
 import sys
 import json
 from requests import get
@@ -29,7 +30,7 @@ def add_city():
             flash("City already displayed")
             redirect(url_for('index'))
 
-        row = City(**get_weather(data))
+        row = City(**get_weather(data), date=datetime.now())
         db.session.add(row)
         db.session.commit()
         return redirect(url_for('index'))
@@ -56,6 +57,7 @@ def update_state(city_id):
             weather = get_weather(data)
             row.temperature = weather['temperature']
             row.state = weather['state']
+            row.date = datetime.now()
             db.session.commit()
         else:
             flash("City not in a database.")
@@ -89,6 +91,7 @@ if __name__ == '__main__':
         name = db.Column(db.String(50), unique=True, nullable=False)
         temperature = db.Column(db.Integer, nullable=False)
         state = db.Column(db.String(40), nullable=False)
+        date = db.Column(db.DateTime, nullable=False)
 
         def __repr__(self):
             return f"<City: {self.name}>"
