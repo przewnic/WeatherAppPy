@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 import sys
 import json
 from requests import get
@@ -30,7 +30,7 @@ def add_city():
             flash("City already displayed")
             redirect(url_for('index'))
 
-        row = City(**get_weather(data), date=datetime.now())
+        row = City(**get_weather(data), date=datetime.utcnow()+ timedelta(seconds=int(data['timezone'])))
         db.session.add(row)
         db.session.commit()
         return redirect(url_for('index'))
@@ -57,7 +57,7 @@ def update_state(city_id):
             weather = get_weather(data)
             row.temperature = weather['temperature']
             row.state = weather['state']
-            row.date = datetime.now()
+            row.date = datetime.utcnow() + timedelta(seconds=int(data['timezone']))
             db.session.commit()
         else:
             flash("City not in a database.")
