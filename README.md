@@ -45,7 +45,7 @@
 ```source venv/bin/activate```
 3. Install all external dependencies:
 ```python -m pip install requirements.txt```
-4. Tu run a flask development server:
+4. To run a flask development server:
 ```python app.py```
 
 ## Project Status
